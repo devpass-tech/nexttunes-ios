@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9841E0CA26DE9D37007D7510 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 9841E0C926DE9D37007D7510 /* SwiftUIX */; };
+		9841E0CC26DE9D70007D7510 /* AlbumSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841E0CB26DE9D70007D7510 /* AlbumSearchView.swift */; };
+		9841E0CE26DE9EFF007D7510 /* AlbumItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841E0CD26DE9EFF007D7510 /* AlbumItemView.swift */; };
+		9841E0D026DFEC2D007D7510 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841E0CF26DFEC2D007D7510 /* LoadingView.swift */; };
+		9842631426DBFAC700444B1A /* NextTunesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842631326DBFAC700444B1A /* NextTunesApp.swift */; };
+		9842631626DBFAC700444B1A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842631526DBFAC700444B1A /* SplashView.swift */; };
+		9842631826DBFACA00444B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9842631726DBFACA00444B1A /* Assets.xcassets */; };
+		9842631B26DBFACA00444B1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9842631A26DBFACA00444B1A /* Preview Assets.xcassets */; };
+		9842632626DBFACB00444B1A /* NextTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842632526DBFACB00444B1A /* NextTunesTests.swift */; };
+		9842633126DBFACB00444B1A /* NextTunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842633026DBFACB00444B1A /* NextTunesUITests.swift */; };
+		9842633F26DBFC1F00444B1A /* SpotifySearchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842633E26DBFC1F00444B1A /* SpotifySearchAPIClient.swift */; };
+		9842634526DBFD1300444B1A /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842634426DBFD1300444B1A /* ContentType.swift */; };
+		9842634726DBFD2C00444B1A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842634626DBFD2C00444B1A /* HTTPClient.swift */; };
+		9842634926DBFD4C00444B1A /* HTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842634826DBFD4C00444B1A /* HTTPHeaderField.swift */; };
+		9842634B26DBFD6800444B1A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842634A26DBFD6800444B1A /* HTTPMethod.swift */; };
+		9842634D26DBFD7B00444B1A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842634C26DBFD7B00444B1A /* Response.swift */; };
+		9842634F26DBFD9900444B1A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842634E26DBFD9900444B1A /* NetworkClient.swift */; };
+		9842635226DC029E00444B1A /* SpotifyAuthAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842635126DC029E00444B1A /* SpotifyAuthAPIClient.swift */; };
+		9842635526DC036100444B1A /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842635426DC036100444B1A /* AuthorizationResponse.swift */; };
+		9842635726DC258200444B1A /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842635626DC258200444B1A /* AlbumListView.swift */; };
+		9842635926DC2F6200444B1A /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842635826DC2F6200444B1A /* AccessToken.swift */; };
+		9842635B26DC308900444B1A /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842635A26DC308900444B1A /* SearchResponse.swift */; };
+		9842635E26DC373500444B1A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842635D26DC373500444B1A /* ImageLoader.swift */; };
+		9842636126DC377500444B1A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842636026DC377500444B1A /* URLImage.swift */; };
+		9842636326DC3A9A00444B1A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842636226DC3A9A00444B1A /* ImageCache.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9842632226DBFACB00444B1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9842630826DBFAC700444B1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9842630F26DBFAC700444B1A;
+			remoteInfo = NextTunes;
+		};
+		9842632D26DBFACB00444B1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9842630826DBFAC700444B1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9842630F26DBFAC700444B1A;
+			remoteInfo = NextTunes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9841E0CB26DE9D70007D7510 /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
+		9841E0CD26DE9EFF007D7510 /* AlbumItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemView.swift; sourceTree = "<group>"; };
+		9841E0CF26DFEC2D007D7510 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9842631026DBFAC700444B1A /* NextTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9842631326DBFAC700444B1A /* NextTunesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTunesApp.swift; sourceTree = "<group>"; };
+		9842631526DBFAC700444B1A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		9842631726DBFACA00444B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9842631A26DBFACA00444B1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9842631C26DBFACA00444B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9842632126DBFACB00444B1A /* NextTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9842632526DBFACB00444B1A /* NextTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTunesTests.swift; sourceTree = "<group>"; };
+		9842632726DBFACB00444B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9842632C26DBFACB00444B1A /* NextTunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextTunesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9842633026DBFACB00444B1A /* NextTunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTunesUITests.swift; sourceTree = "<group>"; };
+		9842633226DBFACB00444B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9842633E26DBFC1F00444B1A /* SpotifySearchAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySearchAPIClient.swift; sourceTree = "<group>"; };
+		9842634426DBFD1300444B1A /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		9842634626DBFD2C00444B1A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		9842634826DBFD4C00444B1A /* HTTPHeaderField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderField.swift; sourceTree = "<group>"; };
+		9842634A26DBFD6800444B1A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		9842634C26DBFD7B00444B1A /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		9842634E26DBFD9900444B1A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		9842635126DC029E00444B1A /* SpotifyAuthAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthAPIClient.swift; sourceTree = "<group>"; };
+		9842635426DC036100444B1A /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
+		9842635626DC258200444B1A /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
+		9842635826DC2F6200444B1A /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		9842635A26DC308900444B1A /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		9842635D26DC373500444B1A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		9842636026DC377500444B1A /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		9842636226DC3A9A00444B1A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9842630D26DBFAC700444B1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9841E0CA26DE9D37007D7510 /* SwiftUIX in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9842631E26DBFACB00444B1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9842632926DBFACB00444B1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9841E0D126DFED99007D7510 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				9842634426DBFD1300444B1A /* ContentType.swift */,
+				9842634626DBFD2C00444B1A /* HTTPClient.swift */,
+				9842634826DBFD4C00444B1A /* HTTPHeaderField.swift */,
+				9842634A26DBFD6800444B1A /* HTTPMethod.swift */,
+				9842634C26DBFD7B00444B1A /* Response.swift */,
+				9842634E26DBFD9900444B1A /* NetworkClient.swift */,
+			);
+			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		9842630726DBFAC700444B1A = {
+			isa = PBXGroup;
+			children = (
+				9842631226DBFAC700444B1A /* NextTunes */,
+				9842632426DBFACB00444B1A /* NextTunesTests */,
+				9842632F26DBFACB00444B1A /* NextTunesUITests */,
+				9842631126DBFAC700444B1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9842631126DBFAC700444B1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9842631026DBFAC700444B1A /* NextTunes.app */,
+				9842632126DBFACB00444B1A /* NextTunesTests.xctest */,
+				9842632C26DBFACB00444B1A /* NextTunesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9842631226DBFAC700444B1A /* NextTunes */ = {
+			isa = PBXGroup;
+			children = (
+				9842635C26DC372600444B1A /* Helpers */,
+				9842634126DBFCC200444B1A /* App */,
+				9842634326DBFCD200444B1A /* Resources */,
+				9842634226DBFCCB00444B1A /* Screens */,
+				9842634026DBFCB400444B1A /* DataManager */,
+			);
+			path = NextTunes;
+			sourceTree = "<group>";
+		};
+		9842631926DBFACA00444B1A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9842631A26DBFACA00444B1A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9842632426DBFACB00444B1A /* NextTunesTests */ = {
+			isa = PBXGroup;
+			children = (
+				9842632526DBFACB00444B1A /* NextTunesTests.swift */,
+				9842632726DBFACB00444B1A /* Info.plist */,
+			);
+			path = NextTunesTests;
+			sourceTree = "<group>";
+		};
+		9842632F26DBFACB00444B1A /* NextTunesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9842633026DBFACB00444B1A /* NextTunesUITests.swift */,
+				9842633226DBFACB00444B1A /* Info.plist */,
+			);
+			path = NextTunesUITests;
+			sourceTree = "<group>";
+		};
+		9842634026DBFCB400444B1A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				9842635326DC033E00444B1A /* Models */,
+				9842635026DBFEA800444B1A /* APIClient */,
+				9841E0D126DFED99007D7510 /* NetworkClient */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		9842634126DBFCC200444B1A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9842631326DBFAC700444B1A /* NextTunesApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9842634226DBFCCB00444B1A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9842635F26DC375D00444B1A /* Components */,
+				9842631526DBFAC700444B1A /* SplashView.swift */,
+				9842635626DC258200444B1A /* AlbumListView.swift */,
+				9841E0CB26DE9D70007D7510 /* AlbumSearchView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9842634326DBFCD200444B1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9842631926DBFACA00444B1A /* Preview Content */,
+				9842631726DBFACA00444B1A /* Assets.xcassets */,
+				9842631C26DBFACA00444B1A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9842635026DBFEA800444B1A /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				9842635826DC2F6200444B1A /* AccessToken.swift */,
+				9842633E26DBFC1F00444B1A /* SpotifySearchAPIClient.swift */,
+				9842635126DC029E00444B1A /* SpotifyAuthAPIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		9842635326DC033E00444B1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9842635426DC036100444B1A /* AuthorizationResponse.swift */,
+				9842635A26DC308900444B1A /* SearchResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9842635C26DC372600444B1A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9842635D26DC373500444B1A /* ImageLoader.swift */,
+				9842636226DC3A9A00444B1A /* ImageCache.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9842635F26DC375D00444B1A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9842636026DC377500444B1A /* URLImage.swift */,
+				9841E0CF26DFEC2D007D7510 /* LoadingView.swift */,
+				9841E0CD26DE9EFF007D7510 /* AlbumItemView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9842630F26DBFAC700444B1A /* NextTunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9842633526DBFACB00444B1A /* Build configuration list for PBXNativeTarget "NextTunes" */;
+			buildPhases = (
+				9842630C26DBFAC700444B1A /* Sources */,
+				9842630D26DBFAC700444B1A /* Frameworks */,
+				9842630E26DBFAC700444B1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NextTunes;
+			packageProductDependencies = (
+				9841E0C926DE9D37007D7510 /* SwiftUIX */,
+			);
+			productName = NextTunes;
+			productReference = 9842631026DBFAC700444B1A /* NextTunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9842632026DBFACB00444B1A /* NextTunesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9842633826DBFACB00444B1A /* Build configuration list for PBXNativeTarget "NextTunesTests" */;
+			buildPhases = (
+				9842631D26DBFACB00444B1A /* Sources */,
+				9842631E26DBFACB00444B1A /* Frameworks */,
+				9842631F26DBFACB00444B1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9842632326DBFACB00444B1A /* PBXTargetDependency */,
+			);
+			name = NextTunesTests;
+			productName = NextTunesTests;
+			productReference = 9842632126DBFACB00444B1A /* NextTunesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9842632B26DBFACB00444B1A /* NextTunesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9842633B26DBFACB00444B1A /* Build configuration list for PBXNativeTarget "NextTunesUITests" */;
+			buildPhases = (
+				9842632826DBFACB00444B1A /* Sources */,
+				9842632926DBFACB00444B1A /* Frameworks */,
+				9842632A26DBFACB00444B1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9842632E26DBFACB00444B1A /* PBXTargetDependency */,
+			);
+			name = NextTunesUITests;
+			productName = NextTunesUITests;
+			productReference = 9842632C26DBFACB00444B1A /* NextTunesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9842630826DBFAC700444B1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9842630F26DBFAC700444B1A = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					9842632026DBFACB00444B1A = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 9842630F26DBFAC700444B1A;
+					};
+					9842632B26DBFACB00444B1A = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 9842630F26DBFAC700444B1A;
+					};
+				};
+			};
+			buildConfigurationList = 9842630B26DBFAC700444B1A /* Build configuration list for PBXProject "NextTunes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9842630726DBFAC700444B1A;
+			packageReferences = (
+				9841E0C826DE9D37007D7510 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
+			productRefGroup = 9842631126DBFAC700444B1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9842630F26DBFAC700444B1A /* NextTunes */,
+				9842632026DBFACB00444B1A /* NextTunesTests */,
+				9842632B26DBFACB00444B1A /* NextTunesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9842630E26DBFAC700444B1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9842631B26DBFACA00444B1A /* Preview Assets.xcassets in Resources */,
+				9842631826DBFACA00444B1A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9842631F26DBFACB00444B1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9842632A26DBFACB00444B1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9842630C26DBFAC700444B1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9842635B26DC308900444B1A /* SearchResponse.swift in Sources */,
+				9842634D26DBFD7B00444B1A /* Response.swift in Sources */,
+				9842636326DC3A9A00444B1A /* ImageCache.swift in Sources */,
+				9842635E26DC373500444B1A /* ImageLoader.swift in Sources */,
+				9842635926DC2F6200444B1A /* AccessToken.swift in Sources */,
+				9842631626DBFAC700444B1A /* SplashView.swift in Sources */,
+				9842635726DC258200444B1A /* AlbumListView.swift in Sources */,
+				9842635226DC029E00444B1A /* SpotifyAuthAPIClient.swift in Sources */,
+				9842634926DBFD4C00444B1A /* HTTPHeaderField.swift in Sources */,
+				9842634B26DBFD6800444B1A /* HTTPMethod.swift in Sources */,
+				9841E0CC26DE9D70007D7510 /* AlbumSearchView.swift in Sources */,
+				9842634726DBFD2C00444B1A /* HTTPClient.swift in Sources */,
+				9842634F26DBFD9900444B1A /* NetworkClient.swift in Sources */,
+				9841E0D026DFEC2D007D7510 /* LoadingView.swift in Sources */,
+				9841E0CE26DE9EFF007D7510 /* AlbumItemView.swift in Sources */,
+				9842634526DBFD1300444B1A /* ContentType.swift in Sources */,
+				9842631426DBFAC700444B1A /* NextTunesApp.swift in Sources */,
+				9842633F26DBFC1F00444B1A /* SpotifySearchAPIClient.swift in Sources */,
+				9842635526DC036100444B1A /* AuthorizationResponse.swift in Sources */,
+				9842636126DC377500444B1A /* URLImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9842631D26DBFACB00444B1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9842632626DBFACB00444B1A /* NextTunesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9842632826DBFACB00444B1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9842633126DBFACB00444B1A /* NextTunesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9842632326DBFACB00444B1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9842630F26DBFAC700444B1A /* NextTunes */;
+			targetProxy = 9842632226DBFACB00444B1A /* PBXContainerItemProxy */;
+		};
+		9842632E26DBFACB00444B1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9842630F26DBFAC700444B1A /* NextTunes */;
+			targetProxy = 9842632D26DBFACB00444B1A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9842633326DBFACB00444B1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9842633426DBFACB00444B1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9842633626DBFACB00444B1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NextTunes/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = B8F644M47X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NextTunes/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpass.NextTunes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9842633726DBFACB00444B1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NextTunes/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = B8F644M47X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NextTunes/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpass.NextTunes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9842633926DBFACB00444B1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F644M47X;
+				INFOPLIST_FILE = NextTunesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpass.NextTunesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NextTunes.app/NextTunes";
+			};
+			name = Debug;
+		};
+		9842633A26DBFACB00444B1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F644M47X;
+				INFOPLIST_FILE = NextTunesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpass.NextTunesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NextTunes.app/NextTunes";
+			};
+			name = Release;
+		};
+		9842633C26DBFACB00444B1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F644M47X;
+				INFOPLIST_FILE = NextTunesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpass.NextTunesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NextTunes;
+			};
+			name = Debug;
+		};
+		9842633D26DBFACB00444B1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8F644M47X;
+				INFOPLIST_FILE = NextTunesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devpass.NextTunesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NextTunes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9842630B26DBFAC700444B1A /* Build configuration list for PBXProject "NextTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9842633326DBFACB00444B1A /* Debug */,
+				9842633426DBFACB00444B1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9842633526DBFACB00444B1A /* Build configuration list for PBXNativeTarget "NextTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9842633626DBFACB00444B1A /* Debug */,
+				9842633726DBFACB00444B1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9842633826DBFACB00444B1A /* Build configuration list for PBXNativeTarget "NextTunesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9842633926DBFACB00444B1A /* Debug */,
+				9842633A26DBFACB00444B1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9842633B26DBFACB00444B1A /* Build configuration list for PBXNativeTarget "NextTunesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9842633C26DBFACB00444B1A /* Debug */,
+				9842633D26DBFACB00444B1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9841E0C826DE9D37007D7510 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9841E0C926DE9D37007D7510 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9841E0C826DE9D37007D7510 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9842630826DBFAC700444B1A /* Project object */;
+}
