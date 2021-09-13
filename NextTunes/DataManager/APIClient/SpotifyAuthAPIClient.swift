@@ -27,7 +27,7 @@ final class SpotifyAuthAPI: SpotifyAuthAPIProtocol {
     var httpHeaders: [HTTPHeaderField : String] {
 
         return [
-            .authorization : "Basic <Base64 encoded client:secret>",
+            .authorization : "Basic YWVlMzkyYTdkYzM1NGZlZGIzYjNhZmI4OWJhM2JlMzk6MjViMTBkZWU1MGEyNDYxN2E0MzVmMTc2ZmYyZjY5YjM=",
             .contentType : "application/x-www-form-urlencoded"]
     }
 
