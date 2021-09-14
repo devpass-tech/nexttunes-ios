@@ -32,6 +32,7 @@
 		9842635E26DC373500444B1A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842635D26DC373500444B1A /* ImageLoader.swift */; };
 		9842636126DC377500444B1A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842636026DC377500444B1A /* URLImage.swift */; };
 		9842636326DC3A9A00444B1A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842636226DC3A9A00444B1A /* ImageCache.swift */; };
+		DEF017AF26F0E276003D4614 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DEF017AE26F0E276003D4614 /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF017AF26F0E276003D4614 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +297,9 @@
 				9842632326DBFACB00444B1A /* PBXTargetDependency */,
 			);
 			name = NextTunesTests;
+			packageProductDependencies = (
+				DEF017AE26F0E276003D4614 /* SnapshotTesting */,
+			);
 			productName = NextTunesTests;
 			productReference = 9842632126DBFACB00444B1A /* NextTunesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -350,6 +355,7 @@
 			mainGroup = 9842630726DBFAC700444B1A;
 			packageReferences = (
 				9841E0C826DE9D37007D7510 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				DEF017AD26F0E276003D4614 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 9842631126DBFAC700444B1A /* Products */;
 			projectDirPath = "";
@@ -742,6 +748,14 @@
 				kind = branch;
 			};
 		};
+		DEF017AD26F0E276003D4614 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -749,6 +763,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9841E0C826DE9D37007D7510 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
+		};
+		DEF017AE26F0E276003D4614 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEF017AD26F0E276003D4614 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
