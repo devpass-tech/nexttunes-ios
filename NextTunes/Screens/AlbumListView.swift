@@ -16,6 +16,7 @@ struct AlbumListView: View {
     let networkClient: NetworkClient
     
     var body: some View {
+        
         NavigationView {
             List(albums) { album in
 
