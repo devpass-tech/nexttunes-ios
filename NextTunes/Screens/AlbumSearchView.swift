@@ -32,18 +32,16 @@ struct AlbumSearchView: View {
                 ProgressView()
             } else {
 
-                List(searchResults) { album in
-
-                    AlbumItemView(album: album)
-                        .onPress {
-
-                            showModal = false
-
-
-                            onAlbumSelected(album)
-                            
-                        }
-                }
+					List(searchResults) { album in
+						
+						Button(action: {
+							showModal = false
+							onAlbumSelected(album)
+						}) {
+							AlbumItemView(album: album)
+						}
+						
+					}
                 .navigationTitle("Search albums")
                 .navigationBarItems(leading: Button("Close") {
 
