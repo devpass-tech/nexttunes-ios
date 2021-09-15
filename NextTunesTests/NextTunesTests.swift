@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SnapshotTesting
 @testable import NextTunes
 
 class NextTunesTests: XCTestCase {
