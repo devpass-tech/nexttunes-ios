@@ -9,23 +9,21 @@ import SwiftUI
 
 struct AlbumListView: View {
     
-    @State private var albums: [Album] = [] 
-    @State private var showingSearch = false
-    @State private var selectedAlbum: Album?
-    
     let networkClient: NetworkClient
+    
+    @StateObject var albumListVM = AlbumListViewModel()
+    @State private var showingSearch = false
     
     var body: some View {
         
         NavigationView {
             
             List {
-                
-                ForEach(self.albums) { album in
+                ForEach(albumListVM.albums) { album in
                     AlbumItemView(album: album)
                 }
-                .onDelete(perform: deleteAlbum)
-                .onMove(perform: moveAlbum)
+                .onDelete(perform: albumListVM.deleteAlbum)
+                .onMove(perform: albumListVM.moveAlbum)
             }
             
             .toolbar {
@@ -41,30 +39,22 @@ struct AlbumListView: View {
                     .sheet(isPresented: $showingSearch,
                            onDismiss: {
                             
-                            if let selectedAlbum = selectedAlbum {
+                            if let selectedAlbum = albumListVM.selectedAlbum {
                                 
-                                albums.append(selectedAlbum)
-                                self.selectedAlbum = nil
+                                albumListVM.albums.append(selectedAlbum)
+                                albumListVM.selectedAlbum = nil
                             }
                            }) {
                         
                         AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
                             
-                            selectedAlbum = album
+                            albumListVM.selectedAlbum = album
                         })
                 }
                 }
             }
             .navigationTitle("Next Tunes")
         }
-    }
-    
-    func deleteAlbum(indexSet: IndexSet) {
-        self.albums.remove(atOffsets: indexSet)
-    }
-    
-    func moveAlbum(from: IndexSet, to: Int) {
-        self.albums.move(fromOffsets: from, toOffset: to)
     }
 }
 
