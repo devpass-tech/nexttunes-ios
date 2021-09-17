@@ -11,7 +11,7 @@ struct AlbumListView: View {
     
     let networkClient: NetworkClient
     
-    @StateObject var albumListVM = AlbumListViewModel()
+    @StateObject var albumListViewModel = AlbumListViewModel()
     @State private var showingSearch = false
     
     var body: some View {
@@ -19,11 +19,11 @@ struct AlbumListView: View {
         NavigationView {
             
             List {
-                ForEach(albumListVM.albums) { album in
+                ForEach(albumListViewModel.albums) { album in
                     AlbumItemView(album: album)
                 }
-                .onDelete(perform: albumListVM.deleteAlbum)
-                .onMove(perform: albumListVM.moveAlbum)
+                .onDelete(perform: albumListViewModel.deleteAlbum)
+                .onMove(perform: albumListViewModel.moveAlbum)
             }
             
             .toolbar {
@@ -39,16 +39,16 @@ struct AlbumListView: View {
                     .sheet(isPresented: $showingSearch,
                            onDismiss: {
                             
-                            if let selectedAlbum = albumListVM.selectedAlbum {
+                            if let selectedAlbum = albumListViewModel.selectedAlbum {
                                 
-                                albumListVM.albums.append(selectedAlbum)
-                                albumListVM.selectedAlbum = nil
+                                albumListViewModel.albums.append(selectedAlbum)
+                                albumListViewModel.selectedAlbum = nil
                             }
                            }) {
                         
                         AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
                             
-                            albumListVM.selectedAlbum = album
+                            albumListViewModel.selectedAlbum = album
                         })
                 }
                 }
