@@ -22,7 +22,6 @@ struct AlbumSearchView: View {
 
     let onAlbumSelected: (Album) -> ()
 
-
     var body: some View {
 
         NavigationView {
@@ -32,21 +31,15 @@ struct AlbumSearchView: View {
                 ProgressView()
             } else {
 
-					List(searchResults) { album in
-						
-						Button(action: {
-							showModal = false
-							onAlbumSelected(album)
-						}) {
-							AlbumItemView(album: album)
-						}
-						
-					}
-                .navigationTitle("Search albums")
-                .navigationBarItems(leading: Button("Close") {
-
-                    showModal = false
-                })
+                List(searchResults) { album in
+                    
+                    Button(action: {
+                        showModal = false
+                        onAlbumSelected(album)
+                    }) {
+                        AlbumItemView(album: album)
+                    }
+                }
                 .navigationSearchBar {
                     SearchBar("Artist or album",
                               text: $searchText,
@@ -62,16 +55,20 @@ struct AlbumSearchView: View {
 
                                 self.searchResults = response.albums.items
                             }
-
                             isSearching = false
                         }
 
                     }
                     .onCancel {
-
+                            
                     }
                     .searchBarStyle(.default)
                 }
+                .navigationTitle("Search albums")
+                .navigationBarItems(leading: Button("Close") {
+
+                    showModal = false
+                })
             }
 
         }
