@@ -12,6 +12,8 @@ struct AlbumListView: View {
     let networkClient: NetworkClient
     
     @StateObject var albumListViewModel = AlbumListViewModel()
+    
+    @State private var editMode = EditMode.inactive
     @State private var showingSearch = false
     
     var body: some View {
@@ -25,38 +27,41 @@ struct AlbumListView: View {
                 .onDelete(perform: albumListViewModel.deleteAlbum)
                 .onMove(perform: albumListViewModel.moveAlbum)
             }
-            
-            .toolbar {
-                
-                HStack {
-                    
-                    EditButton()
-                    
-                    Button("Search") {
-                        
-                        showingSearch = true
-                    }
-                    .sheet(isPresented: $showingSearch,
-                           onDismiss: {
-                            
-                            if let selectedAlbum = albumListViewModel.selectedAlbum {
-                                
-                                albumListViewModel.albums.append(selectedAlbum)
-                                albumListViewModel.selectedAlbum = nil
-                            }
-                           }) {
-                        
-                        AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
-                            
-                            albumListViewModel.selectedAlbum = album
-                        })
-                }
-                }
-            }
+            .environment(\.editMode, $editMode)
+            .animation(.spring(response: 0))
+            .listStyle(PlainListStyle())
             .navigationTitle("Next Tunes")
+            .navigationBarItems(
+                trailing:
+                    
+                    HStack {
+                        
+                       EditButton(editMode: $editMode)
+                        
+                        Button("Search") {
+                            
+                            editMode = EditMode.inactive
+                            showingSearch = true
+                        }
+                        .sheet(isPresented: $showingSearch,
+                               onDismiss: {
+                                
+                                if let selectedAlbum = albumListViewModel.selectedAlbum {
+                                    
+                                    albumListViewModel.albums.append(selectedAlbum)
+                                    albumListViewModel.selectedAlbum = nil
+                                }
+                               }) {
+                            
+                            AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
+                                
+                                albumListViewModel.selectedAlbum = album
+                            })
+                    }
+                })
+            }
         }
     }
-}
 
 struct AlbumListView_Previews: PreviewProvider {
     
