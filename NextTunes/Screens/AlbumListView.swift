@@ -18,42 +18,73 @@ struct AlbumListView: View {
         
         NavigationView {
             
-            List {
-                ForEach(albumListViewModel.albums) { album in
-                    AlbumItemView(album: album)
-                }
-                .onDelete(perform: albumListViewModel.deleteAlbum)
-                .onMove(perform: albumListViewModel.moveAlbum)
-            }
-            
-            .toolbar {
-                
-                HStack {
-                    
-                    EditButton()
-                    
-                    Button("Search") {
-                        
-                        showingSearch = true
+            ZStack {
+                if albumListViewModel.albums.isEmpty {
+                    EmptyView(action: {
+                        self.showingSearch = true
+                    })
+                } else {
+                    List {
+                        ForEach(albumListViewModel.albums) { album in
+                            AlbumItemView(album: album)
+                        }
+                        .onDelete(perform: albumListViewModel.deleteAlbum)
+                        .onMove(perform: albumListViewModel.moveAlbum)
                     }
-                    .sheet(isPresented: $showingSearch,
-                           onDismiss: {
-                            
-                            if let selectedAlbum = albumListViewModel.selectedAlbum {
-                                
-                                albumListViewModel.albums.append(selectedAlbum)
-                                albumListViewModel.selectedAlbum = nil
-                            }
-                           }) {
+                    .toolbar {
                         
-                        AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
+                        HStack {
                             
-                            albumListViewModel.selectedAlbum = album
-                        })
-                }
+                            EditButton()
+                            
+                            Button("Search") {
+                                
+                                showingSearch = true
+                            }
+                            .sheet(isPresented: $showingSearch,
+                                   onDismiss: {
+                                    
+                                    if let selectedAlbum = albumListViewModel.selectedAlbum {
+                                        
+                                        albumListViewModel.albums.append(selectedAlbum)
+                                        albumListViewModel.selectedAlbum = nil
+                                    }
+                                   }) {
+                                
+                                AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
+                                    
+                                    albumListViewModel.selectedAlbum = album
+                                })
+                        }
                 }
             }
             .navigationTitle("Next Tunes")
+            .listStyle(PlainListStyle())
+            .navigationBarItems(
+                trailing:
+                    HStack {
+                        EditButton()
+                        
+                        Button("Search") {
+                            showingSearch = true
+                        }
+                        .sheet(isPresented: $showingSearch,
+                               onDismiss: {
+                                
+                                if let selectedAlbum = albumListViewModel.selectedAlbum {
+                                    
+                                    albumListViewModel.albums.append(selectedAlbum)
+                                    albumListViewModel.selectedAlbum = nil
+                                }
+                               }) {
+                            AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
+                                
+                                albumListViewModel.selectedAlbum = album
+                            })
+                        }
+                    })
+                }
+            }
         }
     }
 }
