@@ -22,58 +22,78 @@ struct AlbumSearchView: View {
 
     let onAlbumSelected: (Album) -> ()
 
-
     var body: some View {
 
-        NavigationView {
 
-            if isSearching {
+        ZStack {
 
-                ProgressView()
-            } else {
+            NavigationView {
 
-					List(searchResults) { album in
-						
-						Button(action: {
-							showModal = false
-							onAlbumSelected(album)
-						}) {
-							AlbumItemView(album: album)
-						}
-						
-					}
-                .navigationTitle("Search albums")
-                .navigationBarItems(leading: Button("Close") {
+                if isSearching {
+                    ProgressView()
 
-                    showModal = false
-                })
-                .navigationSearchBar {
-                    SearchBar("Artist or album",
-                              text: $searchText,
-                              isEditing: $isEditing) {
+                } else {
 
-                        isSearching = true
+                    List(searchResults) { album in
 
-                        let networkClient = NetworkClient()
-                        let searchAPI = SpotifySearchAPI(networkClient: networkClient)
-                        searchAPI.fetchAlbums(term: searchText) { response in
-
-                            if let response = response {
-
-                                self.searchResults = response.albums.items
-                            }
-
-                            isSearching = false
+                        Button(action: {
+                            showModal = false
+                            onAlbumSelected(album)
+                        }) {
+                            AlbumItemView(album: album)
                         }
 
                     }
-                    .onCancel {
+                    .navigationTitle("Search albums")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarItems(leading: Button("Close") {
 
+                        showModal = false
+                    })
+                    .navigationSearchBar {
+
+                        SearchBar("Artist or album",
+                                  text: $searchText,
+                                  isEditing: $isEditing) {
+
+                            isSearching = true
+
+                            let networkClient = NetworkClient()
+                            let searchAPI = SpotifySearchAPI(networkClient: networkClient)
+                            searchAPI.fetchAlbums(term: searchText) { response in
+
+                                if let response = response {
+
+                                    self.searchResults = response.albums.items
+                                }
+
+                                isSearching = false
+                            }
+
+                        }
+                        .onCancel {
+
+                        }
+                        .searchBarStyle(.default)
                     }
-                    .searchBarStyle(.default)
                 }
             }
 
+            VStack {
+
+                if searchResults.isEmpty {
+                    
+                    Text("Everybody's looking for something 🎶")
+                        .font(.headline)
+
+                    Text("Search for artists or albuns and add them to your Next Tunes List!")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 16)
+                        .padding(16)
+                }
+            }
         }
     }
 }
