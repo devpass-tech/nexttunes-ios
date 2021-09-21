@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		132E1D4226F0F0E6007962B7 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E1D4126F0F0E6007962B7 /* EmptyView.swift */; };
+		13ABAF0F26F2BDEF00A64115 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ABAF0E26F2BDEF00A64115 /* AlbumListViewModel.swift */; };
 		9841E0CA26DE9D37007D7510 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 9841E0C926DE9D37007D7510 /* SwiftUIX */; };
 		9841E0CC26DE9D70007D7510 /* AlbumSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841E0CB26DE9D70007D7510 /* AlbumSearchView.swift */; };
 		9841E0CE26DE9EFF007D7510 /* AlbumItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841E0CD26DE9EFF007D7510 /* AlbumItemView.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		132E1D4126F0F0E6007962B7 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		13ABAF0E26F2BDEF00A64115 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 		9841E0CB26DE9D70007D7510 /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
 		9841E0CD26DE9EFF007D7510 /* AlbumItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemView.swift; sourceTree = "<group>"; };
 		9841E0CF26DFEC2D007D7510 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13ABAF0D26F2BDCB00A64115 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				13ABAF0E26F2BDEF00A64115 /* AlbumListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9841E0D126DFED99007D7510 /* NetworkClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		9842631226DBFAC700444B1A /* NextTunes */ = {
 			isa = PBXGroup;
 			children = (
+				13ABAF0D26F2BDCB00A64115 /* ViewModels */,
 				9842635C26DC372600444B1A /* Helpers */,
 				9842634126DBFCC200444B1A /* App */,
 				9842634326DBFCD200444B1A /* Resources */,
@@ -414,6 +425,7 @@
 				9842634B26DBFD6800444B1A /* HTTPMethod.swift in Sources */,
 				9841E0CC26DE9D70007D7510 /* AlbumSearchView.swift in Sources */,
 				9842634726DBFD2C00444B1A /* HTTPClient.swift in Sources */,
+				13ABAF0F26F2BDEF00A64115 /* AlbumListViewModel.swift in Sources */,
 				9842634F26DBFD9900444B1A /* NetworkClient.swift in Sources */,
 				9841E0D026DFEC2D007D7510 /* LoadingView.swift in Sources */,
 				9841E0CE26DE9EFF007D7510 /* AlbumItemView.swift in Sources */,
