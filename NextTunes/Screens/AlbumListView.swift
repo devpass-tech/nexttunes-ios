@@ -20,12 +20,20 @@ struct AlbumListView: View {
         
         NavigationView {
             
-            List {
-                ForEach(albumListViewModel.albums) { album in
-                    AlbumItemView(album: album)
+            ZStack {
+                if albumListViewModel.albums.isEmpty {
+                    EmptyView(action: {
+                        self.showingSearch = true
+                    })
+                } else {
+                    List {
+                        ForEach(albumListViewModel.albums) { album in
+                            AlbumItemView(album: album)
+                        }
+                        .onDelete(perform: albumListViewModel.deleteAlbum)
+                        .onMove(perform: albumListViewModel.moveAlbum)
+                    }
                 }
-                .onDelete(perform: albumListViewModel.deleteAlbum)
-                .onMove(perform: albumListViewModel.moveAlbum)
             }
             .environment(\.editMode, $editMode)
             .animation(.spring(response: 0))
@@ -36,10 +44,9 @@ struct AlbumListView: View {
                     
                     HStack {
                         
-                       EditButton(editMode: $editMode)
+                        EditButton(editMode: $editMode)
                         
                         Button("Search") {
-                            
                             editMode = EditMode.inactive
                             showingSearch = true
                         }
@@ -57,11 +64,11 @@ struct AlbumListView: View {
                                 
                                 albumListViewModel.selectedAlbum = album
                             })
-                    }
-                })
-            }
+                        }
+                    })
         }
     }
+}
 
 struct AlbumListView_Previews: PreviewProvider {
     
