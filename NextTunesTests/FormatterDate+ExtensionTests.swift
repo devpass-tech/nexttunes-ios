@@ -11,7 +11,7 @@ import XCTest
 class FormatterDate_ExtensionTests: XCTestCase {
 	
 	func test_DateFormat_whenWrongDate_shouldReturnNil() {
-		let sut: String? = "21.09-202"
+		let sut: String? = "21.09.2021"
 		
 		XCTAssertNil(sut?.formatterDate())
 	}
