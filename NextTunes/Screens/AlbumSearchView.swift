@@ -42,6 +42,8 @@ struct AlbumSearchView: View {
                                     AlbumItemView(album: album)
                                 }
                             }
+                            .listStyle(PlainListStyle())
+                        
                         .navigationSearchBar {
                             SearchBar("Artist or album",
                                       text: $searchText,
