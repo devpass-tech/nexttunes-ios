@@ -16,7 +16,6 @@ struct SplashView: View {
     var body: some View {
 
         if authenticated {
-
             AlbumListView(networkClient: self.networkClient)
                 .transition(.opacity)
 

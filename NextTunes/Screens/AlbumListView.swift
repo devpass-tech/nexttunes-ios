@@ -9,62 +9,64 @@ import SwiftUI
 
 struct AlbumListView: View {
     
-    @State private var albums: [Album] = [] 
-    @State private var showingSearch = false
-    @State private var selectedAlbum: Album?
-    
     let networkClient: NetworkClient
+    
+    @StateObject var albumListViewModel = AlbumListViewModel()
+    
+    @State private var editMode = EditMode.inactive
+    @State private var showingSearch = false
     
     var body: some View {
         
         NavigationView {
             
-            List {
-                
-                ForEach(self.albums) { album in
-                    AlbumItemView(album: album)
-                }
-                .onDelete(perform: deleteAlbum)
-                .onMove(perform: moveAlbum)
-            }
-            
-            .toolbar {
-                
-                HStack {
-                    
-                    EditButton()
-                    
-                    Button("Search") {
-                        
-                        showingSearch = true
+            ZStack {
+                if albumListViewModel.albums.isEmpty {
+                    EmptyView(action: {
+                        self.showingSearch = true
+                    })
+                } else {
+                    List {
+                        ForEach(albumListViewModel.albums) { album in
+                            AlbumItemView(album: album)
+                        }
+                        .onDelete(perform: albumListViewModel.deleteAlbum)
+                        .onMove(perform: albumListViewModel.moveAlbum)
                     }
-                    .sheet(isPresented: $showingSearch,
-                           onDismiss: {
-                            
-                            if let selectedAlbum = selectedAlbum {
-                                
-                                albums.append(selectedAlbum)
-                                self.selectedAlbum = nil
-                            }
-                           }) {
-                        
-                        AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
-                            
-                            selectedAlbum = album
-                        })
-                }
                 }
             }
+            .environment(\.editMode, $editMode)
+            .animation(.spring(response: 0))
+            .listStyle(PlainListStyle())
             .navigationTitle("Next Tunes")
+            .navigationBarItems(
+                trailing:
+                    
+                    HStack {
+                        
+                        EditButton(editMode: $editMode)
+                        
+                        Button("Search") {
+                            editMode = EditMode.inactive
+                            showingSearch = true
+                        }
+                        .sheet(isPresented: $showingSearch,
+                               onDismiss: {
+                                
+                                if let selectedAlbum = albumListViewModel.selectedAlbum {
+                                    
+                                    albumListViewModel.albums.append(selectedAlbum)
+                                    albumListViewModel.selectedAlbum = nil
+                                }
+                               }) {
+                            
+                            AlbumSearchView(showModal: $showingSearch, onAlbumSelected: { album in
+                                
+                                albumListViewModel.selectedAlbum = album
+                            })
+                        }
+                    })
         }
-    }
-    
-    func deleteAlbum(indexSet: IndexSet) {
-        self.albums.remove(atOffsets: indexSet)
-    }
-    
-    func moveAlbum(from: IndexSet, to: Int) {
-        self.albums.move(fromOffsets: from, toOffset: to)
     }
 }
 
