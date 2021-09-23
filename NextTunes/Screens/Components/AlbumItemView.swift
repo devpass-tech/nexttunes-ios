@@ -35,13 +35,15 @@ struct AlbumItemView: View {
     }
 }
 
-
 struct AlbumItemView_Previews: PreviewProvider {
     static var previews: some View {
         AlbumItemView(album:
                         Album(id: "",
                               artists: [Artist(id: "", name: "Artist name")],
                               images: [], name: "Album name",
-                              releaseDate: ""))
+                              releaseDate: "",
+                              externalUrl: ExternalUrl(spotify: "")
+                        )
+        )
     }
 }
