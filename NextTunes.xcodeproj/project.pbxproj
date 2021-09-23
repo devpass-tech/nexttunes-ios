@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		132E1D4226F0F0E6007962B7 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E1D4126F0F0E6007962B7 /* EmptyView.swift */; };
+		1362C8CE26F56242008C5002 /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1362C8CD26F56242008C5002 /* EditButton.swift */; };
 		13ABAF0F26F2BDEF00A64115 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ABAF0E26F2BDEF00A64115 /* AlbumListViewModel.swift */; };
 		9841E0CA26DE9D37007D7510 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 9841E0C926DE9D37007D7510 /* SwiftUIX */; };
 		9841E0CC26DE9D70007D7510 /* AlbumSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841E0CB26DE9D70007D7510 /* AlbumSearchView.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		132E1D4126F0F0E6007962B7 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		1362C8CD26F56242008C5002 /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		13ABAF0E26F2BDEF00A64115 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 		9841E0CB26DE9D70007D7510 /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
 		9841E0CD26DE9EFF007D7510 /* AlbumItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemView.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				9841E0CF26DFEC2D007D7510 /* LoadingView.swift */,
 				9841E0CD26DE9EFF007D7510 /* AlbumItemView.swift */,
 				132E1D4126F0F0E6007962B7 /* EmptyView.swift */,
+				1362C8CD26F56242008C5002 /* EditButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				9842635B26DC308900444B1A /* SearchResponse.swift in Sources */,
 				9842634D26DBFD7B00444B1A /* Response.swift in Sources */,
 				9842636326DC3A9A00444B1A /* ImageCache.swift in Sources */,
+				1362C8CE26F56242008C5002 /* EditButton.swift in Sources */,
 				9842635E26DC373500444B1A /* ImageLoader.swift in Sources */,
 				9842635926DC2F6200444B1A /* AccessToken.swift in Sources */,
 				9842631626DBFAC700444B1A /* SplashView.swift in Sources */,
