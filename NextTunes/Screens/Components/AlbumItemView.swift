@@ -26,7 +26,7 @@ struct AlbumItemView: View {
                     .font(.title2.bold())
                 Text(album.artists.first?.name ?? "")
                     .font(.subheadline)
-                Text("Release date: \(album.releaseDate)")
+					 Text("Release date: \(album.releaseDate.formatterDate() ?? "")")
                     .font(.subheadline)
 
             }
