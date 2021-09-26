@@ -18,7 +18,7 @@
 		9842631626DBFAC700444B1A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842631526DBFAC700444B1A /* SplashView.swift */; };
 		9842631826DBFACA00444B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9842631726DBFACA00444B1A /* Assets.xcassets */; };
 		9842631B26DBFACA00444B1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9842631A26DBFACA00444B1A /* Preview Assets.xcassets */; };
-		9842632626DBFACB00444B1A /* NextTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842632526DBFACB00444B1A /* NextTunesTests.swift */; };
+		9842632626DBFACB00444B1A /* AlbumItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842632526DBFACB00444B1A /* AlbumItemViewTests.swift */; };
 		9842633126DBFACB00444B1A /* NextTunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842633026DBFACB00444B1A /* NextTunesUITests.swift */; };
 		9842633F26DBFC1F00444B1A /* SpotifySearchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842633E26DBFC1F00444B1A /* SpotifySearchAPIClient.swift */; };
 		9842634526DBFD1300444B1A /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842634426DBFD1300444B1A /* ContentType.swift */; };
@@ -69,7 +69,7 @@
 		9842631A26DBFACA00444B1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9842631C26DBFACA00444B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9842632126DBFACB00444B1A /* NextTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9842632526DBFACB00444B1A /* NextTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTunesTests.swift; sourceTree = "<group>"; };
+		9842632526DBFACB00444B1A /* AlbumItemViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemViewTests.swift; sourceTree = "<group>"; };
 		9842632726DBFACB00444B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9842632C26DBFACB00444B1A /* NextTunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextTunesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9842633026DBFACB00444B1A /* NextTunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTunesUITests.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		9842632426DBFACB00444B1A /* NextTunesTests */ = {
 			isa = PBXGroup;
 			children = (
-				9842632526DBFACB00444B1A /* NextTunesTests.swift */,
+				BC37549D2700BC2500133422 /* SnapshotTests */,
 				9842632726DBFACB00444B1A /* Info.plist */,
 			);
 			path = NextTunesTests;
@@ -275,6 +275,14 @@
 				1362C8CD26F56242008C5002 /* EditButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		BC37549D2700BC2500133422 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				9842632526DBFACB00444B1A /* AlbumItemViewTests.swift */,
+			);
+			path = SnapshotTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9842632626DBFACB00444B1A /* NextTunesTests.swift in Sources */,
+				9842632626DBFACB00444B1A /* AlbumItemViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +650,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8F644M47X;
 				INFOPLIST_FILE = NextTunesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -664,7 +672,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8F644M47X;
 				INFOPLIST_FILE = NextTunesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
