@@ -18,7 +18,7 @@
 		9842631626DBFAC700444B1A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842631526DBFAC700444B1A /* SplashView.swift */; };
 		9842631826DBFACA00444B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9842631726DBFACA00444B1A /* Assets.xcassets */; };
 		9842631B26DBFACA00444B1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9842631A26DBFACA00444B1A /* Preview Assets.xcassets */; };
-		9842632626DBFACB00444B1A /* AlbumItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842632526DBFACB00444B1A /* AlbumItemViewTests.swift */; };
+		9842632626DBFACB00444B1A /* FormatterDate+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842632526DBFACB00444B1A /* FormatterDate+ExtensionTests.swift */; };
 		9842633126DBFACB00444B1A /* NextTunesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842633026DBFACB00444B1A /* NextTunesUITests.swift */; };
 		9842633F26DBFC1F00444B1A /* SpotifySearchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842633E26DBFC1F00444B1A /* SpotifySearchAPIClient.swift */; };
 		9842634526DBFD1300444B1A /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842634426DBFD1300444B1A /* ContentType.swift */; };
@@ -35,6 +35,9 @@
 		9842635E26DC373500444B1A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842635D26DC373500444B1A /* ImageLoader.swift */; };
 		9842636126DC377500444B1A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842636026DC377500444B1A /* URLImage.swift */; };
 		9842636326DC3A9A00444B1A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842636226DC3A9A00444B1A /* ImageCache.swift */; };
+		BC18144C26FD37B800FEF6AE /* FormatterDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18144B26FD37B800FEF6AE /* FormatterDate+Extension.swift */; };
+		BC3754FA27012C2A00133422 /* AlbumItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3754F627012C2A00133422 /* AlbumItemViewTests.swift */; };
+		BC3754FB27012C2A00133422 /* testSnapshotAlbumItemView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC3754F927012C2A00133422 /* testSnapshotAlbumItemView.1.png */; };
 		DEF017AF26F0E276003D4614 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DEF017AE26F0E276003D4614 /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +72,7 @@
 		9842631A26DBFACA00444B1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9842631C26DBFACA00444B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9842632126DBFACB00444B1A /* NextTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9842632526DBFACB00444B1A /* AlbumItemViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItemViewTests.swift; sourceTree = "<group>"; };
+		9842632526DBFACB00444B1A /* FormatterDate+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatterDate+ExtensionTests.swift"; sourceTree = "<group>"; };
 		9842632726DBFACB00444B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9842632C26DBFACB00444B1A /* NextTunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextTunesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9842633026DBFACB00444B1A /* NextTunesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTunesUITests.swift; sourceTree = "<group>"; };
@@ -89,6 +92,9 @@
 		9842635D26DC373500444B1A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		9842636026DC377500444B1A /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		9842636226DC3A9A00444B1A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		BC18144B26FD37B800FEF6AE /* FormatterDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatterDate+Extension.swift"; sourceTree = "<group>"; };
+		BC3754F627012C2A00133422 /* AlbumItemViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumItemViewTests.swift; sourceTree = "<group>"; };
+		BC3754F927012C2A00133422 /* testSnapshotAlbumItemView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testSnapshotAlbumItemView.1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 		9842631226DBFAC700444B1A /* NextTunes */ = {
 			isa = PBXGroup;
 			children = (
+				BC18144A26FD378F00FEF6AE /* Extensions */,
 				13ABAF0D26F2BDCB00A64115 /* ViewModels */,
 				9842635C26DC372600444B1A /* Helpers */,
 				9842634126DBFCC200444B1A /* App */,
@@ -183,7 +190,8 @@
 		9842632426DBFACB00444B1A /* NextTunesTests */ = {
 			isa = PBXGroup;
 			children = (
-				BC37549D2700BC2500133422 /* SnapshotTests */,
+				BC3754F527012C2A00133422 /* SnapshotTests */,
+				9842632526DBFACB00444B1A /* FormatterDate+ExtensionTests.swift */,
 				9842632726DBFACB00444B1A /* Info.plist */,
 			);
 			path = NextTunesTests;
@@ -277,12 +285,37 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		BC37549D2700BC2500133422 /* SnapshotTests */ = {
+		BC18144A26FD378F00FEF6AE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9842632526DBFACB00444B1A /* AlbumItemViewTests.swift */,
+				BC18144B26FD37B800FEF6AE /* FormatterDate+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC3754F527012C2A00133422 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC3754F627012C2A00133422 /* AlbumItemViewTests.swift */,
+				BC3754F727012C2A00133422 /* __Snapshots__ */,
 			);
 			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		BC3754F727012C2A00133422 /* __Snapshots__ */ = {
+			isa = PBXGroup;
+			children = (
+				BC3754F827012C2A00133422 /* AlbumItemViewTests */,
+			);
+			path = __Snapshots__;
+			sourceTree = "<group>";
+		};
+		BC3754F827012C2A00133422 /* AlbumItemViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC3754F927012C2A00133422 /* testSnapshotAlbumItemView.1.png */,
+			);
+			path = AlbumItemViewTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3754FB27012C2A00133422 /* testSnapshotAlbumItemView.1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +476,7 @@
 				9841E0D026DFEC2D007D7510 /* LoadingView.swift in Sources */,
 				9841E0CE26DE9EFF007D7510 /* AlbumItemView.swift in Sources */,
 				9842634526DBFD1300444B1A /* ContentType.swift in Sources */,
+				BC18144C26FD37B800FEF6AE /* FormatterDate+Extension.swift in Sources */,
 				9842631426DBFAC700444B1A /* NextTunesApp.swift in Sources */,
 				9842633F26DBFC1F00444B1A /* SpotifySearchAPIClient.swift in Sources */,
 				9842635526DC036100444B1A /* AuthorizationResponse.swift in Sources */,
@@ -454,7 +489,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9842632626DBFACB00444B1A /* AlbumItemViewTests.swift in Sources */,
+				9842632626DBFACB00444B1A /* FormatterDate+ExtensionTests.swift in Sources */,
+				BC3754FA27012C2A00133422 /* AlbumItemViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +644,7 @@
 				DEVELOPMENT_TEAM = B8F644M47X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NextTunes/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -630,7 +666,7 @@
 				DEVELOPMENT_TEAM = B8F644M47X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NextTunes/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -650,7 +686,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8F644M47X;
 				INFOPLIST_FILE = NextTunesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -672,7 +708,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8F644M47X;
 				INFOPLIST_FILE = NextTunesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -24,56 +24,75 @@ struct AlbumSearchView: View {
 
     var body: some View {
 
-        NavigationView {
+            NavigationView {
 
-            if isSearching {
+                ZStack {
+                    if isSearching {
 
-                ProgressView()
-            } else {
+                        ProgressView()
 
-                List(searchResults) { album in
-                    
-                    Button(action: {
-                        showModal = false
-                        onAlbumSelected(album)
-                    }) {
-                        AlbumItemView(album: album)
-                    }
-                }
-                .navigationSearchBar {
-                    SearchBar("Artist or album",
-                              text: $searchText,
-                              isEditing: $isEditing) {
+                    } else {
 
-                        isSearching = true
+                            List(searchResults) { album in
 
-                        let networkClient = NetworkClient()
-                        let searchAPI = SpotifySearchAPI(networkClient: networkClient)
-                        searchAPI.fetchAlbums(term: searchText) { response in
-
-                            if let response = response {
-
-                                self.searchResults = response.albums.items
+                                Button(action: {
+                                    showModal = false
+                                    onAlbumSelected(album)
+                                }) {
+                                    AlbumItemView(album: album)
+                                }
                             }
-                            isSearching = false
+                            .listStyle(PlainListStyle())
+                        
+                        .navigationSearchBar {
+                            SearchBar("Artist or album",
+                                      text: $searchText,
+                                      isEditing: $isEditing) {
+
+                                let networkClient = NetworkClient()
+                                let searchAPI = SpotifySearchAPI(networkClient: networkClient)
+                                searchAPI.fetchAlbums(term: searchText) { response in
+
+                                    if let response = response {
+
+                                        self.searchResults = response.albums.items
+                                    }
+
+                                    isSearching = false
+                                }
+                            }
+                                      .onCancel {
+
+                                      }
+                                      .searchBarStyle(.default)
                         }
+                        .navigationTitle("Search albums")
+                        ._inlineNavigationBar()
+                        .navigationBarItems(leading: Button("Close") {
 
+                            showModal = false
+                        })
                     }
-                    .onCancel {
-                            
+
+                    VStack {
+                        if searchResults.isEmpty {
+
+                            Text("Everybody's looking for something 🎶")
+                                .font(.headline)
+
+                            Text("Search for artists or albuns and add them to your Next Tunes List!")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 16)
+                                .padding(16)
+                        }
                     }
-                    .searchBarStyle(.default)
                 }
-                .navigationTitle("Search albums")
-                .navigationBarItems(leading: Button("Close") {
-
-                    showModal = false
-                })
             }
-
         }
     }
-}
+
 
 struct AlbumSearchView_Previews: PreviewProvider {
 
