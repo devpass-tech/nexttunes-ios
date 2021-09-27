@@ -28,16 +28,23 @@ struct Album: Codable, Identifiable {
     var images: [AlbumImage]
     var name: String
     var releaseDate: String
+    var externalUrl: ExternalUrl
 
     enum CodingKeys: String, CodingKey {
 
         case releaseDate = "release_date"
+        case externalUrl = "external_urls"
 
         case id
         case name
         case artists
         case images
     }
+}
+
+struct ExternalUrl: Codable {
+    
+    var spotify: String
 }
 
 struct AlbumImage: Codable {

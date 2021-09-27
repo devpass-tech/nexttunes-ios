@@ -28,7 +28,13 @@ struct AlbumListView: View {
                 } else {
                     List {
                         ForEach(albumListViewModel.albums) { album in
-                            AlbumItemView(album: album)
+                            Button {
+                                if let url = URL(string: album.externalUrl.spotify) {
+                                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                }
+                            } label: {
+                                AlbumItemView(album: album)
+                            }
                         }
                         .onDelete(perform: albumListViewModel.deleteAlbum)
                         .onMove(perform: albumListViewModel.moveAlbum)
