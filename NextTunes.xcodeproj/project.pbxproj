@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		132E1D4226F0F0E6007962B7 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E1D4126F0F0E6007962B7 /* EmptyView.swift */; };
+		135D0D0D2709187700E9724E /* AlbumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D0D0C2709187700E9724E /* AlbumList.swift */; };
+		135D0D0F2709C51B00E9724E /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D0D0E2709C51B00E9724E /* SearchButton.swift */; };
+		135D0D112709CFC600E9724E /* ShowAlbumListOrShowEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D0D102709CFC600E9724E /* ShowAlbumListOrShowEmptyView.swift */; };
 		1362C8CE26F56242008C5002 /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1362C8CD26F56242008C5002 /* EditButton.swift */; };
 		13ABAF0F26F2BDEF00A64115 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ABAF0E26F2BDEF00A64115 /* AlbumListViewModel.swift */; };
 		9841E0CA26DE9D37007D7510 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 9841E0C926DE9D37007D7510 /* SwiftUIX */; };
@@ -60,6 +63,9 @@
 
 /* Begin PBXFileReference section */
 		132E1D4126F0F0E6007962B7 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		135D0D0C2709187700E9724E /* AlbumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumList.swift; sourceTree = "<group>"; };
+		135D0D0E2709C51B00E9724E /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
+		135D0D102709CFC600E9724E /* ShowAlbumListOrShowEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlbumListOrShowEmptyView.swift; sourceTree = "<group>"; };
 		1362C8CD26F56242008C5002 /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		13ABAF0E26F2BDEF00A64115 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 		9841E0CB26DE9D70007D7510 /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
@@ -124,6 +130,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135D0D0B2709180600E9724E /* AlbumListViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				135D0D102709CFC600E9724E /* ShowAlbumListOrShowEmptyView.swift */,
+				135D0D0C2709187700E9724E /* AlbumList.swift */,
+				132E1D4126F0F0E6007962B7 /* EmptyView.swift */,
+				1362C8CD26F56242008C5002 /* EditButton.swift */,
+				135D0D0E2709C51B00E9724E /* SearchButton.swift */,
+			);
+			path = AlbumListViewComponents;
+			sourceTree = "<group>";
+		};
 		13ABAF0D26F2BDCB00A64115 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,11 +294,10 @@
 		9842635F26DC375D00444B1A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				135D0D0B2709180600E9724E /* AlbumListViewComponents */,
 				9842636026DC377500444B1A /* URLImage.swift */,
 				9841E0CF26DFEC2D007D7510 /* LoadingView.swift */,
 				9841E0CD26DE9EFF007D7510 /* AlbumItemView.swift */,
-				132E1D4126F0F0E6007962B7 /* EmptyView.swift */,
-				1362C8CD26F56242008C5002 /* EditButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -458,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135D0D112709CFC600E9724E /* ShowAlbumListOrShowEmptyView.swift in Sources */,
 				9842635B26DC308900444B1A /* SearchResponse.swift in Sources */,
 				9842634D26DBFD7B00444B1A /* Response.swift in Sources */,
 				9842636326DC3A9A00444B1A /* ImageCache.swift in Sources */,
@@ -475,11 +493,13 @@
 				9842634F26DBFD9900444B1A /* NetworkClient.swift in Sources */,
 				9841E0D026DFEC2D007D7510 /* LoadingView.swift in Sources */,
 				9841E0CE26DE9EFF007D7510 /* AlbumItemView.swift in Sources */,
+				135D0D0D2709187700E9724E /* AlbumList.swift in Sources */,
 				9842634526DBFD1300444B1A /* ContentType.swift in Sources */,
 				BC18144C26FD37B800FEF6AE /* FormatterDate+Extension.swift in Sources */,
 				9842631426DBFAC700444B1A /* NextTunesApp.swift in Sources */,
 				9842633F26DBFC1F00444B1A /* SpotifySearchAPIClient.swift in Sources */,
 				9842635526DC036100444B1A /* AuthorizationResponse.swift in Sources */,
+				135D0D0F2709C51B00E9724E /* SearchButton.swift in Sources */,
 				132E1D4226F0F0E6007962B7 /* EmptyView.swift in Sources */,
 				9842636126DC377500444B1A /* URLImage.swift in Sources */,
 			);
