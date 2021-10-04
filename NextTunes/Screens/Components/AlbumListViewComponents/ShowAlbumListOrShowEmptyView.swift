@@ -22,11 +22,3 @@ struct ShowAlbumListOrShowEmptyView: View {
         }
     }
 }
-
-//struct ShowAlbumListOrShowEmptyView_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//                
-//        ShowAlbumListOrShowEmptyView()
-//    }
-//}

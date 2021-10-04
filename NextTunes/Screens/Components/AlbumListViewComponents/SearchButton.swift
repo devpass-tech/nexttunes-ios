@@ -34,10 +34,3 @@ struct SearchButton: View {
         }
     }
 }
-
-//struct SearchButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//
-//        SearchButton()
-//    }
-//}
