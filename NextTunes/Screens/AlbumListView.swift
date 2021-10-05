@@ -22,7 +22,7 @@ struct AlbumListView: View {
         NavigationView {
             
             ZStack {
-                ShowAlbumListOrShowEmptyView(showingSearch: $showingSearch)
+                ShowAlbumViewOrEmptyView(showingSearch: $showingSearch)
             }
             .environment(\.editMode, self.$editMode)
             .animation(.spring(response: 0))
@@ -30,8 +30,8 @@ struct AlbumListView: View {
             .navigationBarItems(
                 trailing:
                     HStack {
-                        EditButton(editMode: self.$editMode)
-                        SearchButton(showingSearch: $showingSearch)
+                        EditButtonView(editMode: self.$editMode)
+                        SearchButtonView(showingSearch: $showingSearch)
                     })
         }
         .environmentObject(self.albumListViewModel)

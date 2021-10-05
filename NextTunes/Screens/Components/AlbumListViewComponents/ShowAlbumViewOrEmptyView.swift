@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShowAlbumListOrShowEmptyView: View {
+struct ShowAlbumViewOrEmptyView: View {
     
     @EnvironmentObject var albumListViewModel: AlbumListViewModel
     
@@ -18,7 +18,7 @@ struct ShowAlbumListOrShowEmptyView: View {
         if self.albumListViewModel.albums.isEmpty {
             EmptyView(action: {self.showingSearch = true})
         } else {
-            AlbumList()
+            ShowAlbumView()
         }
     }
 }

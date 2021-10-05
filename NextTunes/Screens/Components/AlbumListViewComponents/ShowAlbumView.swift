@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AlbumList: View {
+struct ShowAlbumView: View {
     
     @EnvironmentObject var albumListViewModel: AlbumListViewModel
 
@@ -36,6 +36,6 @@ struct AlbumList: View {
 
 struct AlbumList_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumList()
+        ShowAlbumView()
     }
 }

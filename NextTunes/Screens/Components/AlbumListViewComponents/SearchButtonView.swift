@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchButton: View {
+struct SearchButtonView: View {
     
     @EnvironmentObject var albumListViewModel: AlbumListViewModel
     
