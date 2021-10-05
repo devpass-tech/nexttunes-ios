@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EditButton: View {
+struct EditButtonView: View {
     
     @Binding var editMode: EditMode
 
